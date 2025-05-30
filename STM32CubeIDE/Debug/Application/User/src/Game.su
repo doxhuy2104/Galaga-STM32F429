@@ -1,0 +1,6 @@
+../Application/User/src/Game.cpp:3:1:Game::Game()	8	static
+../Application/User/src/Game.cpp:6:1:Game::~Game()	8	static
+../Application/User/src/Game.cpp:10:6:void Game::update()	8	static
+../Application/User/src/Game.cpp:16:6:void GameThread(void*)	8	static
+../Application/User/src/Game.cpp:18:1:cpp)	0	static
+../Application/User/src/Game.cpp:18:1:cpp)	0	static

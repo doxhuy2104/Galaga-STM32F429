@@ -1,0 +1,5 @@
+../Application/User/src/Entity.cpp:3:1:Entity::Entity()	0	static
+../Application/User/src/Entity.cpp:6:1:Entity::~Entity()	0	static
+../Application/User/src/Entity.cpp:9:6:void Entity::update()	0	static
+../Application/User/src/Entity.cpp:12:6:void Entity::updateX()	0	static
+../Application/User/src/Entity.cpp:15:6:void Entity::updateY()	0	static
