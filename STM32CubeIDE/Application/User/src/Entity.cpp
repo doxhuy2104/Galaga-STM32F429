@@ -15,3 +15,6 @@ void Entity::updateX(){
 void Entity::updateY(){
 
 }
+void Entity::updateStatus(uint8_t status){
+	this->status= status;
+}

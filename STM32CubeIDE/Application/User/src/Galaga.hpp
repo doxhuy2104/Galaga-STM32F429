@@ -4,6 +4,7 @@
 #include "Bullet.hpp"
 #include "Entity.hpp"
 #include <stdio.h>
+#include <vector>
 class Galaga:public Entity{
 public:
 	Galaga();
@@ -11,6 +12,11 @@ public:
 	void update();
 	void moveL();
 	void moveR();
-	void shoot();
+	void fire();
+	bool isFire = false;
+//	std::vector<Bullet> bullets;
+	Bullet bullets[MAX_BULLET];
+	int bulletCount;
+
 };
 #endif

@@ -3,14 +3,17 @@
 
 #include "Galaga.hpp"
 #include "Enemy.hpp"
-
-class Game{
+#include "Bullet.hpp"
+#include <cmsis_os.h>
+class Game {
 public:
 	Game();
-		~Game();
-		void update();
-		Galaga galaga;
+	~Game();
+	void update();
+	Galaga galaga;
+private:
+	int count;
 };
 extern Game game;
-extern void GameThread(void* argument);
+extern void GameThread(void *argument);
 #endif

@@ -27,6 +27,7 @@
 #include "Components/ili9341/ili9341.h"
 #include "stm32f4xx_hal_adc.h"
 #include "stm32f4xx_hal_uart.h"
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -98,11 +99,16 @@ const osThreadAttr_t GUI_Task_attributes = {
 uint8_t isRevD = 0; /* Applicable only for STM32F429I DISCOVERY REVD and above */
 osMessageQueueId_t Queue1Handle;
 osMessageQueueId_t Queue2Handle;
+osMessageQueueId_t Queue3Handle;
+
 const osMessageQueueAttr_t Queue1_Attributes={
 		.name = "Queue1"
 };
 const osMessageQueueAttr_t Queue2_Attributes={
 		.name = "Queue2"
+};
+const osMessageQueueAttr_t Queue3_Attributes={
+		.name = "Queue3"
 };
 uint32_t joyX;
 /* USER CODE END PV */
@@ -158,6 +164,11 @@ static LCD_DrvTypeDef* LcdDrv;
 
 uint32_t I2c3Timeout = I2C3_TIMEOUT_MAX; /*<! Value of Timeout when I2C communication fails */
 uint32_t Spi5Timeout = SPI5_TIMEOUT_MAX; /*<! Value of Timeout when SPI communication fails */
+
+int _write(int file, char *ptr, int len) {
+    HAL_UART_Transmit(&huart1, (uint8_t*)ptr, len, HAL_MAX_DELAY);
+    return len;
+}
 /* USER CODE END 0 */
 
 /**
@@ -221,6 +232,10 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
+  Queue1Handle = osMessageQueueNew(16, sizeof(uint16_t), &Queue1_Attributes);
+  Queue2Handle = osMessageQueueNew(16, sizeof(uint16_t), &Queue2_Attributes);
+  Queue3Handle = osMessageQueueNew(16, sizeof(uint16_t), &Queue3_Attributes);
+
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
@@ -731,6 +746,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : PG2 */
+  GPIO_InitStruct.Pin = GPIO_PIN_2;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
+
   /* USER CODE BEGIN MX_GPIO_Init_2 */
   /* USER CODE END MX_GPIO_Init_2 */
 }
@@ -1084,8 +1105,11 @@ void StartDefaultTask(void *argument)
 		  uint8_t data = 'L';
 		  osMessageQueuePut(Queue2Handle, &data, 0, 10);
 	  }
-
-    osDelay(100);
+	  if(HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_2)==GPIO_PIN_RESET){
+		  uint8_t data = 'F';
+		 osMessageQueuePut(Queue3Handle, &data, 0, 10);
+	  }
+    osDelay(16);
   }
   /* USER CODE END 5 */
 }

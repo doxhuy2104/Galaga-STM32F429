@@ -3,3 +3,4 @@
 ../Application/User/src/Entity.cpp:9:6:void Entity::update()	1
 ../Application/User/src/Entity.cpp:12:6:void Entity::updateX()	1
 ../Application/User/src/Entity.cpp:15:6:void Entity::updateY()	1
+../Application/User/src/Entity.cpp:18:6:void Entity::updateStatus(uint8_t)	1

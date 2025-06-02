@@ -2,7 +2,7 @@
   "Application": {
     "Screens": [
       {
-        "Name": "Screen1",
+        "Name": "MainScreen",
         "Components": [
           {
             "Type": "Image",
@@ -63,13 +63,13 @@
             "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "Screen2"
+              "ActionComponent": "GameScreen"
             }
           }
         ]
       },
       {
-        "Name": "Screen2",
+        "Name": "GameScreen",
         "Components": [
           {
             "Type": "Image",
@@ -112,7 +112,7 @@
       "Height": 320
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "Screen1",
+    "StartupScreenName": "MainScreen",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

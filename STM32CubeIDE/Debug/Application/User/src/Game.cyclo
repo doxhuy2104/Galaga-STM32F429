@@ -1,6 +1,6 @@
-../Application/User/src/Game.cpp:3:1:Game::Game()	1
-../Application/User/src/Game.cpp:6:1:Game::~Game()	1
-../Application/User/src/Game.cpp:10:6:void Game::update()	1
-../Application/User/src/Game.cpp:16:6:void GameThread(void*)	1
-../Application/User/src/Game.cpp:18:1:cpp)	1
-../Application/User/src/Game.cpp:18:1:cpp)	1
+../Application/User/src/Game.cpp:5:1:Game::Game()	1
+../Application/User/src/Game.cpp:8:1:Game::~Game()	1
+../Application/User/src/Game.cpp:12:6:void Game::update()	3
+../Application/User/src/Game.cpp:23:6:void GameThread(void*)	1
+../Application/User/src/Game.cpp:29:1:cpp)	1
+../Application/User/src/Game.cpp:29:1:cpp)	1

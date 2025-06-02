@@ -1,18 +1,30 @@
 #include "Game.hpp"
+#include <cmsis_os.h>
 Game game;
-Game::Game(){
+
+Game::Game() {
+count=0;
+}
+Game::~Game() {
 
 }
-Game::~Game(){
+
+void Game::update() {
+	count++;
+
+	    if (count >= 7) {
+		if(galaga.isFire)
+			galaga.fire();
+		count = 0;
+	}
 
 }
 
-void Game::update(){
-	for(;;){
-		galaga.update();
+void GameThread(void *argument) {
+	while (1) {
+		game.update();
+		game.galaga.update();
+		osDelay(16);
 	}
 }
 
-void GameThread(void* argument) {
-    game.update();
-}
