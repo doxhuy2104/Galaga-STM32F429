@@ -1,6 +1,0 @@
-../Application/User/src/Galaga.cpp:3:1:Galaga::Galaga()	2
-../Application/User/src/Galaga.cpp:14:1:Galaga::~Galaga()	2
-../Application/User/src/Galaga.cpp:17:6:void Galaga::update()	3
-../Application/User/src/Galaga.cpp:24:6:void Galaga::moveL()	2
-../Application/User/src/Galaga.cpp:28:6:void Galaga::moveR()	2
-../Application/User/src/Galaga.cpp:32:6:void Galaga::fire()	3

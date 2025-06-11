@@ -12,13 +12,13 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:703:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
-D:/Galaga/Galaga/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:33:6:virtual void GameScreenView::tearDownScreen()	0	static
-D:/Galaga/Galaga/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:36:6:virtual void GameScreenView::handleTickEvent()	48	static
-../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:12:13:GameScreenView::~GameScreenView()	16	static
-../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:12:13:virtual GameScreenView::~GameScreenView()	8	static
+D:/Galaga/Galaga/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:62:6:virtual void GameScreenView::tearDownScreen()	0	static
+D:/Galaga/Galaga/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:65:6:virtual void GameScreenView::handleTickEvent()	56	static
+../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:13:13:GameScreenView::~GameScreenView()	16	static
+../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:13:13:virtual GameScreenView::~GameScreenView()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	8	static
-D:/Galaga/Galaga/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:9:1:GameScreenView::GameScreenView()	40	static
-D:/Galaga/Galaga/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:24:6:virtual void GameScreenView::setupScreen()	48	static
+D:/Galaga/Galaga/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:11:1:GameScreenView::GameScreenView()	56	static
+D:/Galaga/Galaga/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:53:6:virtual void GameScreenView::setupScreen()	48	static

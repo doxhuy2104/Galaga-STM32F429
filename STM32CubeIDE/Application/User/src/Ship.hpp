@@ -1,14 +1,14 @@
 
-#ifndef GALAGA_HPP
-#define GALAGA_HPP
+#ifndef SHIP_HPP
+#define SHIP_HPP
 #include "Bullet.hpp"
 #include "Entity.hpp"
 #include <stdio.h>
 #include <vector>
-class Galaga:public Entity{
+class Ship:public Entity{
 public:
-	Galaga();
-	~Galaga();
+	Ship();
+	~Ship();
 	void update();
 	void moveL();
 	void moveR();

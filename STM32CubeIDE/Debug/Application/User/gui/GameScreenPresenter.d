@@ -50,10 +50,10 @@ Application/User/gui/GameScreenPresenter.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
  D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Game.hpp \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Galaga.hpp \
+ D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Enemy.hpp \
  D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bullet.hpp \
  D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Entity.hpp \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Enemy.hpp \
+ D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bee.hpp \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
@@ -64,7 +64,8 @@ Application/User/gui/GameScreenPresenter.o: \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
- ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
+ ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
+ D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Ship.hpp
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -115,10 +116,10 @@ Application/User/gui/GameScreenPresenter.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
 D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Game.hpp:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Galaga.hpp:
+D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Enemy.hpp:
 D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bullet.hpp:
 D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Entity.hpp:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Enemy.hpp:
+D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bee.hpp:
 ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../../Core/Inc/FreeRTOSConfig.h:
@@ -130,3 +131,4 @@ D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Enemy.hpp:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
+D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Ship.hpp:

@@ -40,19 +40,18 @@ void MainScreenView::handleTickEvent(){
 			dAlp = 255;
 		}
 	}
-	bg0Y += 2;
-	bg1Y += 2;
-	if (bg0Y == 0) {
-		bg0Y = -320;
-	}
-	if (bg1Y == 320) {
-		bg1Y = 0;
-	}
-
-	bg0.setY(bg0Y);
-	bg1.setY(bg1Y);
-	bg2.setY(bg0Y);
-	bg3.setY(bg1Y);
+//	bg0Y += 2;
+//	bg1Y += 2;
+//	if (bg0Y == 0) {
+//		bg0Y = -320;
+//	}
+//	if (bg1Y == 320) {
+//		bg1Y = 0;
+//	}
+//	bg0.setY(bg0Y);
+//	bg1.setY(bg1Y);
+//	bg2.setY(bg0Y);
+//	bg3.setY(bg1Y);
 	switch (changeBg) {
 	case 0:
 		bg0.setAlpha(iAlp);

@@ -20,7 +20,7 @@ Bullet::Bullet(uint16_t x, uint16_t y) {
     activeTime=MAX_ACTIVETIME;
 }
 void Bullet::update() {
-	if(y>-8) y-=5;
+	if(y>-8) y-=7;
 	if(activeTime>0) activeTime--;
 	if(activeTime<=0) updateStatus(INACTIVE);
 //	if (status == ACTIVE) {

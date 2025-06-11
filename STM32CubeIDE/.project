@@ -485,6 +485,26 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_Background1.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_bee0.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_bee0.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_bee1.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_bee1.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_butterfly0.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_butterfly0.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_butterfly1.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_butterfly1.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_eBullet.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_eBullet.cpp</locationURI>
@@ -515,9 +535,24 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_eDie4.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_enemy0.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_enemy0.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_enemy1.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_enemy1.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_galaga.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_galaga.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_highScoreText.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_highScoreText.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_mBullet.cpp</name>

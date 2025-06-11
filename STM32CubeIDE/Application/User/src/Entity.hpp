@@ -19,5 +19,6 @@ public:
 	void updateStatus(uint8_t status);
 	void updateX();
 	void updateY();
+	static bool checkCollision(Entity e1,Entity e2);
 };
 #endif

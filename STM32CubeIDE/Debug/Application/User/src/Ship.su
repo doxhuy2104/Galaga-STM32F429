@@ -1,0 +1,6 @@
+../Application/User/src/Ship.cpp:3:1:Ship::Ship()	16	static
+../Application/User/src/Ship.cpp:9:1:Ship::~Ship()	16	static
+../Application/User/src/Ship.cpp:12:6:void Ship::update()	16	static
+../Application/User/src/Ship.cpp:19:6:void Ship::moveL()	0	static
+../Application/User/src/Ship.cpp:23:6:void Ship::moveR()	0	static
+../Application/User/src/Ship.cpp:27:6:void Ship::fire()	32	static

@@ -32,6 +32,7 @@ protected:
     touchgfx::Image bg1;
     touchgfx::Image bg0;
     touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  flexButton1;
+    touchgfx::Image highScore;
 
 private:
 

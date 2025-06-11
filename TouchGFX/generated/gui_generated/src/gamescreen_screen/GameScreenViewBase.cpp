@@ -26,6 +26,18 @@ GameScreenViewBase::GameScreenViewBase()
     bg0.setXY(0, -320);
     bg0.setBitmap(touchgfx::Bitmap(BITMAP_BACKGROUND0_ID));
     add(bg0);
+
+    life1.setXY(0, 300);
+    life1.setBitmap(touchgfx::Bitmap(BITMAP_GALAGA_ID));
+    add(life1);
+
+    life2.setXY(16, 300);
+    life2.setBitmap(touchgfx::Bitmap(BITMAP_GALAGA_ID));
+    add(life2);
+
+    highScore.setXY(81, 0);
+    highScore.setBitmap(touchgfx::Bitmap(BITMAP_HIGHSCORETEXT_ID));
+    add(highScore);
 }
 
 GameScreenViewBase::~GameScreenViewBase()

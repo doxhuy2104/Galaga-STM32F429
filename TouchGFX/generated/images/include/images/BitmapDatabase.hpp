@@ -8,19 +8,26 @@
 
 const uint16_t BITMAP_BACKGROUND0_ID = 0;
 const uint16_t BITMAP_BACKGROUND1_ID = 1;
-const uint16_t BITMAP_EBULLET_ID = 2;
-const uint16_t BITMAP_EDIE0_ID = 3;
-const uint16_t BITMAP_EDIE1_ID = 4;
-const uint16_t BITMAP_EDIE2_ID = 5;
-const uint16_t BITMAP_EDIE3_ID = 6;
-const uint16_t BITMAP_EDIE4_ID = 7;
-const uint16_t BITMAP_GALAGA_ID = 8;
-const uint16_t BITMAP_MBULLET_ID = 9;
-const uint16_t BITMAP_MDIE0_ID = 10;
-const uint16_t BITMAP_MDIE1_ID = 11;
-const uint16_t BITMAP_MDIE2_ID = 12;
-const uint16_t BITMAP_MDIE3_ID = 13;
-const uint16_t BITMAP_START_TEXT_ID = 14;
+const uint16_t BITMAP_BEE0_ID = 2;
+const uint16_t BITMAP_BEE1_ID = 3;
+const uint16_t BITMAP_BUTTERFLY0_ID = 4;
+const uint16_t BITMAP_BUTTERFLY1_ID = 5;
+const uint16_t BITMAP_EBULLET_ID = 6;
+const uint16_t BITMAP_EDIE0_ID = 7;
+const uint16_t BITMAP_EDIE1_ID = 8;
+const uint16_t BITMAP_EDIE2_ID = 9;
+const uint16_t BITMAP_EDIE3_ID = 10;
+const uint16_t BITMAP_EDIE4_ID = 11;
+const uint16_t BITMAP_ENEMY0_ID = 12;
+const uint16_t BITMAP_ENEMY1_ID = 13;
+const uint16_t BITMAP_GALAGA_ID = 14;
+const uint16_t BITMAP_HIGHSCORETEXT_ID = 15;
+const uint16_t BITMAP_MBULLET_ID = 16;
+const uint16_t BITMAP_MDIE0_ID = 17;
+const uint16_t BITMAP_MDIE1_ID = 18;
+const uint16_t BITMAP_MDIE2_ID = 19;
+const uint16_t BITMAP_MDIE3_ID = 20;
+const uint16_t BITMAP_START_TEXT_ID = 21;
 
 namespace BitmapDatabase
 {

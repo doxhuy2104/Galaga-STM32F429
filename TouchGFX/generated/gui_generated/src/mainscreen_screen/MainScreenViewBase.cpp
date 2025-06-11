@@ -33,6 +33,10 @@ MainScreenViewBase::MainScreenViewBase() :
     flexButton1.setAction(flexButtonCallback);
     flexButton1.setPosition(53, 124, 135, 15);
     add(flexButton1);
+
+    highScore.setXY(81, 0);
+    highScore.setBitmap(touchgfx::Bitmap(BITMAP_HIGHSCORETEXT_ID));
+    add(highScore);
 }
 
 MainScreenViewBase::~MainScreenViewBase()

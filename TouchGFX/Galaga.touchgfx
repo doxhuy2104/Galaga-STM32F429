@@ -51,6 +51,14 @@
                 "ImagePressed": "start_text.png"
               }
             ]
+          },
+          {
+            "Type": "Image",
+            "Name": "highScore",
+            "X": 81,
+            "Width": 79,
+            "Height": 7,
+            "RelativeFilename": "highScoreText.png"
           }
         ],
         "Interactions": [
@@ -100,6 +108,31 @@
             "Width": 240,
             "Height": 320,
             "RelativeFilename": "Background0.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "life1",
+            "Y": 300,
+            "Width": 16,
+            "Height": 16,
+            "RelativeFilename": "galaga.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "life2",
+            "X": 16,
+            "Y": 300,
+            "Width": 16,
+            "Height": 16,
+            "RelativeFilename": "galaga.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "highScore",
+            "X": 81,
+            "Width": 79,
+            "Height": 7,
+            "RelativeFilename": "highScoreText.png"
           }
         ],
         "Interactions": []

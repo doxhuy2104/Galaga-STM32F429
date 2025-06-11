@@ -5,6 +5,7 @@
 #include <gui/gamescreen_screen/GameScreenPresenter.hpp>
 #include <images/BitmapDatabase.hpp>
 #include <Game.hpp>
+#include <vector>
 class GameScreenView : public GameScreenViewBase
 {
 public:
@@ -18,9 +19,18 @@ public:
           int16_t bg0Y;
           int16_t bg1Y;
           uint8_t changeBg;
+          uint8_t iAlp;
+                uint8_t dAlp;
   private:
       touchgfx::Image galagaImage;
       touchgfx::Image bulletImages[MAX_BULLET];
+      touchgfx::Image enemy0Images[MAX_ENEMY];
+      touchgfx::Image enemy1Images[MAX_ENEMY];
+      touchgfx::Image bee0Images[MAX_BEE];
+      touchgfx::Image bee1Images[MAX_BEE];
+
+      touchgfx::Image eDieImages[5];
+      int8_t eDieCounter[5];
 };
 
 #endif // GAMESCREENVIEW_HPP
