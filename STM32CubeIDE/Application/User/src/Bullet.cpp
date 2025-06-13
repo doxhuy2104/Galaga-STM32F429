@@ -11,16 +11,17 @@ Bullet::Bullet() {
 }
 
 // Constructor with parameters
-Bullet::Bullet(uint16_t x, uint16_t y) {
+Bullet::Bullet(uint16_t x, uint16_t y, int8_t speed ) {
     this->w = 3;
     this->h = 8;
     this->x = x;
     this->y = y;
+    this->speed = speed;
     status = SPAWN;
     activeTime=MAX_ACTIVETIME;
 }
 void Bullet::update() {
-	if(y>-8) y-=7;
+	y+=speed;
 	if(activeTime>0) activeTime--;
 	if(activeTime<=0) updateStatus(INACTIVE);
 //	if (status == ACTIVE) {

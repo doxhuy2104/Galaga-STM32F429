@@ -1,6 +1,6 @@
 ../Application/User/src/Enemy.cpp:3:1:Enemy::Enemy()	2
 ../Application/User/src/Enemy.cpp:10:1:Enemy::~Enemy()	2
 ../Application/User/src/Enemy.cpp:13:6:void Enemy::update()	4
-../Application/User/src/Enemy.cpp:30:6:void Enemy::fire()	1
+../Application/User/src/Enemy.cpp:30:6:void Enemy::fire()	3
 ../Application/User/src/Enemy.cpp:39:6:void Enemy::moveL()	1
 ../Application/User/src/Enemy.cpp:42:6:void Enemy::moveR()	1

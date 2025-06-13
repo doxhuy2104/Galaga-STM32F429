@@ -11,8 +11,13 @@ Game::Game() {
 	}
 	for (int i = 0; i < MAX_BEE; i++) {
 		bees[i].x = 20 + 20 * i;
-		bees[i].y = 70;
+		bees[i].y = 92;
 		bees[i].status = ALIVE;
+	}
+	for (int i = 0; i < MAX_BUTTERFLY; i++) {
+		butterflys[i].x = 10 + 20 * i;
+		butterflys[i].y = 70;
+		butterflys[i].status = ALIVE;
 	}
 }
 Game::~Game() {
@@ -34,10 +39,15 @@ void Game::update() {
 				game.enemies[i].moveR();
 			}
 			if (game.bees[i].direction == 'L') {
-							game.bees[i].moveL();
-						} else {
-							game.bees[i].moveR();
-						}
+				game.bees[i].moveL();
+			} else {
+				game.bees[i].moveR();
+			}
+			if (game.butterflys[i].direction == 'L') {
+				game.butterflys[i].moveL();
+			} else {
+				game.butterflys[i].moveR();
+			}
 		}
 	}
 
@@ -55,17 +65,30 @@ void Game::update() {
 		}
 	}
 	for (int i = 0; i < MAX_BEE; i++) {
-			if (bees[i].status == DIE || bees[i].status == DEAD)
+		if (bees[i].status == DIE || bees[i].status == DEAD)
+			continue;
+		for (int j = 0; j < MAX_BULLET; j++) {
+			if (ship.bullets[j].status == INACTIVE)
 				continue;
-			for (int j = 0; j < MAX_BULLET; j++) {
-				if (ship.bullets[j].status == INACTIVE)
-					continue;
-				else if (Entity::checkCollision(bees[i], ship.bullets[j])) {
-					ship.bullets[j].status = INACTIVE;
-					bees[i].status = DIE;
-				}
+			else if (Entity::checkCollision(bees[i], ship.bullets[j])) {
+				ship.bullets[j].status = INACTIVE;
+				bees[i].status = DIE;
 			}
 		}
+	}
+
+	for (int i = 0; i < MAX_BUTTERFLY; i++) {
+		if (butterflys[i].status == DIE || butterflys[i].status == DEAD)
+			continue;
+		for (int j = 0; j < MAX_BULLET; j++) {
+			if (ship.bullets[j].status == INACTIVE)
+				continue;
+			else if (Entity::checkCollision(butterflys[i], ship.bullets[j])) {
+				ship.bullets[j].status = INACTIVE;
+				butterflys[i].status = DIE;
+			}
+		}
+	}
 }
 
 void GameThread(void *argument) {
@@ -79,6 +102,10 @@ void GameThread(void *argument) {
 		for (int i = 0; i < MAX_BEE; i++) {
 			if (game.bees[i].status == ALIVE)
 				game.bees[i].update();
+		}
+		for (int i = 0; i < MAX_BUTTERFLY; i++) {
+			if (game.butterflys[i].status == ALIVE)
+				game.butterflys[i].update();
 		}
 		osDelay(16);
 	}

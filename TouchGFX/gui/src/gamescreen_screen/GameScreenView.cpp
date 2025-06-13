@@ -6,7 +6,7 @@ extern osMessageQueueId_t Queue2Handle;
 extern osMessageQueueId_t Queue3Handle;
 
 osThreadId_t gameTaskHandle;
-const uint16_t DEATH_EFFECT_BITMAPS[] = { BITMAP_EDIE0_ID, BITMAP_EDIE1_ID,
+const uint16_t EDIE_BITMAPS[] = { BITMAP_EDIE0_ID, BITMAP_EDIE1_ID,
 		BITMAP_EDIE2_ID, BITMAP_EDIE3_ID, BITMAP_EDIE4_ID };
 GameScreenView::GameScreenView() {
 	bg0Y = -320;
@@ -17,11 +17,25 @@ GameScreenView::GameScreenView() {
 	galagaImage.setBitmap(touchgfx::Bitmap(BITMAP_GALAGA_ID));
 	galagaImage.setXY(112, 280);
 	add (galagaImage);
-
+	oldLive = 1;
+	liveImages[0].setBitmap(touchgfx::Bitmap(BITMAP_LIVE_ID));
+	liveImages[0].setXY(0, 300);
+	add (liveImages[0]);
+	for (int i = 1; i < MAX_LIVE; i++) {
+		liveImages[i].setBitmap(touchgfx::Bitmap(BITMAP_LIVE_ID));
+		liveImages[i].setXY(16 * i, 300);
+		add(liveImages[i]);
+		liveImages[i].setVisible(false);
+	}
 	for (int i = 0; i < MAX_BULLET; i++) {
 		bulletImages[i].setBitmap(touchgfx::Bitmap(BITMAP_MBULLET_ID));
 		bulletImages[i].setXY(0, 0);
-		add (bulletImages[i]);
+		add(bulletImages[i]);
+	}
+	for (int i = 0; i < MAX_BULLET; i++) {
+		eBulletImages[i].setBitmap(touchgfx::Bitmap(BITMAP_EBULLET_ID));
+		eBulletImages[i].setXY(0, 0);
+		add (eBulletImages[i]);
 	}
 	for (int i = 0; i < MAX_ENEMY; i++) {
 		enemy0Images[i].setBitmap(touchgfx::Bitmap(BITMAP_ENEMY0_ID));
@@ -32,7 +46,7 @@ GameScreenView::GameScreenView() {
 		enemy1Images[i].setXY(game.enemies[i].x, game.enemies[i].y);
 		add (enemy1Images[i]);
 	}
-	for (int i = 0; i < MAX_ENEMY; i++) {
+	for (int i = 0; i < MAX_BEE; i++) {
 		bee0Images[i].setBitmap(touchgfx::Bitmap(BITMAP_BEE0_ID));
 		bee0Images[i].setXY(0, 0);
 		add (bee0Images[i]);
@@ -41,8 +55,17 @@ GameScreenView::GameScreenView() {
 		bee1Images[i].setXY(game.bees[i].x, game.bees[i].y);
 		add (bee1Images[i]);
 	}
+	for (int i = 0; i < MAX_BUTTERFLY; i++) {
+		butterfly0Images[i].setBitmap(touchgfx::Bitmap(BITMAP_BUTTERFLY0_ID));
+		butterfly0Images[i].setXY(0, 0);
+		add (butterfly0Images[i]);
+		butterfly0Images[i].setVisible(false);
+		butterfly1Images[i].setBitmap(touchgfx::Bitmap(BITMAP_BUTTERFLY1_ID));
+		butterfly1Images[i].setXY(game.butterflys[i].x, game.butterflys[i].y);
+		add (butterfly1Images[i]);
+	}
 	for (int i = 0; i < 5; i++) {
-		eDieImages[i].setBitmap(touchgfx::Bitmap(DEATH_EFFECT_BITMAPS[0]));
+		eDieImages[i].setBitmap(touchgfx::Bitmap(EDIE_BITMAPS[0]));
 		eDieImages[i].setXY(0, 0);
 		eDieImages[i].setVisible(false);
 		add (eDieImages[i]);
@@ -65,6 +88,7 @@ void GameScreenView::tearDownScreen() {
 void GameScreenView::handleTickEvent() {
 	GameScreenViewBase::handleTickEvent();
 
+	//background
 	tickCount++;
 	if (tickCount % 5 == 0) {
 		if (tickCount % 15 == 0)
@@ -113,6 +137,7 @@ void GameScreenView::handleTickEvent() {
 		break;
 	}
 
+	//ship
 	uint8_t res;
 	if (osMessageQueueGetCount(Queue1Handle) > 0) {
 		osMessageQueueGet(Queue1Handle, &res, NULL, osWaitForever);
@@ -154,6 +179,18 @@ void GameScreenView::handleTickEvent() {
 			break;
 		}
 	}
+	galagaImage.moveTo(game.ship.x, game.ship.y);
+	if (game.ship.live != oldLive) {
+		oldLive = game.ship.live;
+		for (int i = 0; i < game.ship.live; i++) {
+			liveImages[i].setVisible(true);
+		}
+		for (int i = game.ship.live; i < MAX_LIVE; i++) {
+			liveImages[i].setVisible(false);
+		}
+	}
+
+	//enemy
 	for (int i = 0; i < MAX_ENEMY; i++) {
 		switch (game.enemies[i].status) {
 		case ALIVE:
@@ -167,7 +204,6 @@ void GameScreenView::handleTickEvent() {
 				enemy1Images[i].setVisible(false);
 			}
 			break;
-
 		case DIE:
 			enemy1Images[i].setVisible(false);
 			enemy0Images[i].setVisible(false);
@@ -182,7 +218,6 @@ void GameScreenView::handleTickEvent() {
 				}
 			}
 			break;
-
 		case DEAD:
 			enemy1Images[i].setVisible(false);
 			enemy0Images[i].setVisible(false);
@@ -192,7 +227,7 @@ void GameScreenView::handleTickEvent() {
 			break;
 		}
 	}
-	for (int i = 0; i < MAX_ENEMY; i++) {
+	for (int i = 0; i < MAX_BEE; i++) {
 		switch (game.bees[i].status) {
 		case ALIVE:
 			bee1Images[i].moveTo(game.bees[i].x, game.bees[i].y);
@@ -230,20 +265,59 @@ void GameScreenView::handleTickEvent() {
 			break;
 		}
 	}
+
+	for (int i = 0; i < MAX_BUTTERFLY; i++) {
+		switch (game.butterflys[i].status) {
+		case ALIVE:
+			butterfly1Images[i].moveTo(game.butterflys[i].x,
+					game.butterflys[i].y);
+			butterfly0Images[i].moveTo(game.butterflys[i].x,
+					game.butterflys[i].y);
+			if (game.butterflys[i].sprite) {
+				butterfly1Images[i].setVisible(true);
+				butterfly0Images[i].setVisible(false);
+			} else {
+				butterfly0Images[i].setVisible(true);
+				butterfly1Images[i].setVisible(false);
+			}
+			break;
+
+		case DIE:
+			butterfly1Images[i].setVisible(false);
+			butterfly0Images[i].setVisible(false);
+			for (int j = 0; j < 5; j++) {
+				if (eDieCounter[j] == -1) {
+					eDieCounter[j] = 0;
+					eDieImages[j].moveTo(game.butterflys[i].x - 8,
+							game.butterflys[i].y - 8);
+					eDieImages[j].setVisible(true);
+					game.butterflys[i].status = DEAD;
+					break;
+				}
+			}
+			break;
+
+		case DEAD:
+			butterfly1Images[i].setVisible(false);
+			butterfly0Images[i].setVisible(false);
+			break;
+
+		default:
+			break;
+		}
+	}
 	for (int i = 0; i < 5; i++) {
 		if (eDieCounter[i] != -1) {
 			eDieCounter[i]++;
-			if (eDieCounter[i] % 5 == 0) {
-				eDieImages[i].setBitmap(
-						DEATH_EFFECT_BITMAPS[eDieCounter[i] / 5]);
-				if (eDieCounter[i] >= 25) {
+			if (eDieCounter[i] % 3 == 0) {
+				eDieImages[i].setBitmap(EDIE_BITMAPS[eDieCounter[i] / 3]);
+				if (eDieCounter[i] >= 15) {
 					eDieCounter[i] = -1;
-					eDieImages[i].setBitmap(DEATH_EFFECT_BITMAPS[0]);
+					eDieImages[i].setBitmap(EDIE_BITMAPS[0]);
 					eDieImages[i].setVisible(false);
 				}
 			}
 		}
 	}
-	galagaImage.moveTo(game.ship.x, game.ship.y);
 	invalidate();
 }

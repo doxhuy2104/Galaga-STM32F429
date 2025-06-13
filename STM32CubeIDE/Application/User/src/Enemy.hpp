@@ -9,6 +9,8 @@
 #define ALIVE 2
 #define DIE 3
 #define DEAD 4
+
+const uint8_t MAX_EBULLET = 20;
 const uint8_t MAX_ENEMY = 10;
 const uint8_t MAX_CHANGE_DIR_TIME = 80;
 const uint8_t MAX_CHANGE_SPR_TIME = 30;

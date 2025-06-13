@@ -111,23 +111,6 @@
           },
           {
             "Type": "Image",
-            "Name": "life1",
-            "Y": 300,
-            "Width": 16,
-            "Height": 16,
-            "RelativeFilename": "galaga.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "life2",
-            "X": 16,
-            "Y": 300,
-            "Width": 16,
-            "Height": 16,
-            "RelativeFilename": "galaga.png"
-          },
-          {
-            "Type": "Image",
             "Name": "highScore",
             "X": 81,
             "Width": 79,

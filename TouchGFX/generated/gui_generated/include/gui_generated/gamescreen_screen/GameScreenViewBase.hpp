@@ -30,8 +30,6 @@ protected:
     touchgfx::Image bg2;
     touchgfx::Image bg1;
     touchgfx::Image bg0;
-    touchgfx::Image life1;
-    touchgfx::Image life2;
     touchgfx::Image highScore;
 
 private:

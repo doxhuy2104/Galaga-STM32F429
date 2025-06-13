@@ -5,6 +5,9 @@
 #include "Entity.hpp"
 #include <stdio.h>
 #include <vector>
+
+#define MAX_LIVE 10
+
 class Ship:public Entity{
 public:
 	Ship();
@@ -17,6 +20,6 @@ public:
 //	std::vector<Bullet> bullets;
 	Bullet bullets[MAX_BULLET];
 	int bulletCount;
-
+	uint8_t live;
 };
 #endif

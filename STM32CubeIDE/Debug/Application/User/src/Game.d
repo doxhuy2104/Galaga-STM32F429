@@ -1,7 +1,7 @@
 Application/User/src/Game.o: ../Application/User/src/Game.cpp \
  ../Application/User/src/Game.hpp ../Application/User/src/Enemy.hpp \
  ../Application/User/src/Bullet.hpp ../Application/User/src/Entity.hpp \
- ../Application/User/src/Bee.hpp \
+ ../Application/User/src/Bee.hpp ../Application/User/src/Butterfly.hpp \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
@@ -21,6 +21,7 @@ Application/User/src/Game.o: ../Application/User/src/Game.cpp \
 ../Application/User/src/Bullet.hpp:
 ../Application/User/src/Entity.hpp:
 ../Application/User/src/Bee.hpp:
+../Application/User/src/Butterfly.hpp:
 ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../../Core/Inc/FreeRTOSConfig.h:

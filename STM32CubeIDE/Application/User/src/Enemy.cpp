@@ -28,13 +28,13 @@ void Enemy::update() {
 }
 
 void Enemy::fire(){
-//	for (int i = 0; i < MAX_BULLET; i++) {
-//		        if (bullets[i].status == INACTIVE) {
-//		            bullets[i] = Bullet(this->x + 6, this->y + 8);
-//		            bullets[i].status = SPAWN;
-//		            return;
-//		        }
-//		    }
+	for (int i = 0; i < MAX_BULLET; i++) {
+		        if (bullets[i].status == INACTIVE) {
+		            bullets[i] = Bullet(this->x + 6, this->y + 8,5);
+		            bullets[i].status = SPAWN;
+		            return;
+		        }
+		    }
 }
 void Enemy::moveL(){
 	this->x--;

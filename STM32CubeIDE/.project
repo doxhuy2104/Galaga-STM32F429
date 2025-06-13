@@ -495,6 +495,16 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_bee1.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_boss20.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_boss20.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_boss21.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_boss21.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_butterfly0.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_butterfly0.cpp</locationURI>
@@ -555,6 +565,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_highScoreText.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_live.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_live.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_mBullet.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_mBullet.cpp</locationURI>
@@ -578,6 +593,61 @@
 			<name>Application/User/generated/image_mDie3.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_mDie3.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_n0.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_n0.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_n1.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_n1.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_n2.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_n2.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_n3.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_n3.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_n4.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_n4.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_n5.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_n5.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_n6.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_n6.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_n7.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_n7.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_n8.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_n8.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_n9.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_n9.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_s400.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_s400.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_start_text.cpp</name>

@@ -16,10 +16,10 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<GameScreenPresenter>::~View()	1
-D:/Galaga/Galaga/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:43:1:GameScreenViewBase::~GameScreenViewBase()	1
-D:/Galaga/Galaga/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:48:6:virtual void GameScreenViewBase::setupScreen()	1
+D:/Galaga/Galaga/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:35:1:GameScreenViewBase::~GameScreenViewBase()	1
+D:/Galaga/Galaga/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:40:6:virtual void GameScreenViewBase::setupScreen()	1
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<GameScreenPresenter>::~View()	1
-D:/Galaga/Galaga/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:43:1:virtual GameScreenViewBase::~GameScreenViewBase()	1
+D:/Galaga/Galaga/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:35:1:virtual GameScreenViewBase::~GameScreenViewBase()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1

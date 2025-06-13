@@ -7,10 +7,9 @@ const uint8_t MAX_ACTIVETIME=60;
 class Bullet: public Entity {
 public:
 	Bullet();
-	Bullet(uint16_t x, uint16_t y);
+	Bullet(uint16_t x, uint16_t y,int8_t speed);
 	int activeTime;
 	void update();
-	void draw();
 private:
 	int speed;
 };
