@@ -86,6 +86,7 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Entity.hpp \
  D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bee.hpp \
  D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Butterfly.hpp \
+ D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Boss.hpp \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
@@ -159,6 +160,7 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
@@ -249,6 +251,7 @@ D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bullet.hpp:
 D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Entity.hpp:
 D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bee.hpp:
 D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Butterfly.hpp:
+D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Boss.hpp:
 ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../../Core/Inc/FreeRTOSConfig.h:
@@ -322,6 +325,7 @@ D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Ship.hpp:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:

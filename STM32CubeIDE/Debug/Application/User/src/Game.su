@@ -1,6 +1,6 @@
 ../Application/User/src/Game.cpp:5:1:Game::Game()	24	static
-../Application/User/src/Game.cpp:23:1:Game::~Game()	16	static
-../Application/User/src/Game.cpp:27:6:void Game::update()	64	static
-../Application/User/src/Game.cpp:94:6:void GameThread(void*)	24	static
-../Application/User/src/Game.cpp:112:1:cpp)	0	static
-../Application/User/src/Game.cpp:112:1:cpp)	0	static
+../Application/User/src/Game.cpp:24:1:Game::~Game()	16	static
+../Application/User/src/Game.cpp:28:6:void Game::update()	64	static
+../Application/User/src/Game.cpp:110:6:void GameThread(void*)	56	static
+../Application/User/src/Game.cpp:167:1:cpp)	0	static
+../Application/User/src/Game.cpp:167:1:cpp)	0	static

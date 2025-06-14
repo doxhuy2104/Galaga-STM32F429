@@ -40,8 +40,9 @@ const uint16_t BITMAP_N6_ID = 30;
 const uint16_t BITMAP_N7_ID = 31;
 const uint16_t BITMAP_N8_ID = 32;
 const uint16_t BITMAP_N9_ID = 33;
-const uint16_t BITMAP_S400_ID = 34;
-const uint16_t BITMAP_START_TEXT_ID = 35;
+const uint16_t BITMAP_S1UP_ID = 34;
+const uint16_t BITMAP_S400_ID = 35;
+const uint16_t BITMAP_START_TEXT_ID = 36;
 
 namespace BitmapDatabase
 {

@@ -55,6 +55,7 @@ Application/User/gui/GameScreenPresenter.o: \
  D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Entity.hpp \
  D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bee.hpp \
  D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Butterfly.hpp \
+ D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Boss.hpp \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
@@ -122,6 +123,7 @@ D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bullet.hpp:
 D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Entity.hpp:
 D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bee.hpp:
 D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Butterfly.hpp:
+D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Boss.hpp:
 ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../../Core/Inc/FreeRTOSConfig.h:

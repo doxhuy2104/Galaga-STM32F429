@@ -31,6 +31,7 @@ protected:
     touchgfx::Image bg1;
     touchgfx::Image bg0;
     touchgfx::Image highScore;
+    touchgfx::Image s1upImage;
 
 private:
 

@@ -4,6 +4,8 @@
 #include "Enemy.hpp"
 #include "Bee.hpp"
 #include "Butterfly.hpp"
+#include "Boss.hpp"
+
 #include "Bullet.hpp"
 #include "Entity.hpp"
 #include <cmsis_os.h>
@@ -14,10 +16,11 @@ public:
 	~Game();
 	void update();
 	Ship ship;
-	Enemy enemies[MAX_ENEMY];
+	Boss bosses[MAX_BOSS];
 	Bee bees[MAX_BEE];
 	Butterfly butterflys[MAX_BUTTERFLY];
 	Bullet eBullets[MAX_EBULLET];
+	uint32_t score;
 private:
 	int count;
 };

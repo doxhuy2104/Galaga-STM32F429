@@ -8,6 +8,11 @@ extern osMessageQueueId_t Queue3Handle;
 osThreadId_t gameTaskHandle;
 const uint16_t EDIE_BITMAPS[] = { BITMAP_EDIE0_ID, BITMAP_EDIE1_ID,
 		BITMAP_EDIE2_ID, BITMAP_EDIE3_ID, BITMAP_EDIE4_ID };
+const uint16_t MDIE_BITMAPS[] = { BITMAP_MDIE0_ID, BITMAP_MDIE1_ID,
+		BITMAP_MDIE2_ID, BITMAP_MDIE3_ID };
+const uint16_t DIGIT_BITMAPS[] = { BITMAP_N0_ID, BITMAP_N1_ID, BITMAP_N2_ID,
+		BITMAP_N3_ID, BITMAP_N4_ID, BITMAP_N5_ID, BITMAP_N6_ID, BITMAP_N7_ID,
+		BITMAP_N8_ID, BITMAP_N9_ID };
 GameScreenView::GameScreenView() {
 	bg0Y = -320;
 	bg1Y = 0;
@@ -17,22 +22,26 @@ GameScreenView::GameScreenView() {
 	galagaImage.setBitmap(touchgfx::Bitmap(BITMAP_GALAGA_ID));
 	galagaImage.setXY(112, 280);
 	add (galagaImage);
-	oldLive = 1;
-	liveImages[0].setBitmap(touchgfx::Bitmap(BITMAP_LIVE_ID));
-	liveImages[0].setXY(0, 300);
-	add (liveImages[0]);
-	for (int i = 1; i < MAX_LIVE; i++) {
+	mDieImage.setBitmap(touchgfx::Bitmap(BITMAP_MDIE0_ID));
+	mDieImage.setXY(0, 0);
+	add (mDieImage);
+	mDieImage.setVisible(false);
+	for (int i = 0; i < MAX_LIVE; i++) {
 		liveImages[i].setBitmap(touchgfx::Bitmap(BITMAP_LIVE_ID));
 		liveImages[i].setXY(16 * i, 300);
-		add(liveImages[i]);
-		liveImages[i].setVisible(false);
+		add (liveImages[i]);
+		liveImages[i].setVisible(true);
+	}
+	for (int i = 0; i < game.ship.live; i++) {
+
+		liveImages[i].setVisible(true);
 	}
 	for (int i = 0; i < MAX_BULLET; i++) {
 		bulletImages[i].setBitmap(touchgfx::Bitmap(BITMAP_MBULLET_ID));
 		bulletImages[i].setXY(0, 0);
-		add(bulletImages[i]);
+		add (bulletImages[i]);
 	}
-	for (int i = 0; i < MAX_BULLET; i++) {
+	for (int i = 0; i < MAX_EBULLET; i++) {
 		eBulletImages[i].setBitmap(touchgfx::Bitmap(BITMAP_EBULLET_ID));
 		eBulletImages[i].setXY(0, 0);
 		add (eBulletImages[i]);
@@ -43,7 +52,7 @@ GameScreenView::GameScreenView() {
 		add (enemy0Images[i]);
 		enemy0Images[i].setVisible(false);
 		enemy1Images[i].setBitmap(touchgfx::Bitmap(BITMAP_ENEMY1_ID));
-		enemy1Images[i].setXY(game.enemies[i].x, game.enemies[i].y);
+		enemy1Images[i].setXY(game.bosses[i].x, game.bosses[i].y);
 		add (enemy1Images[i]);
 	}
 	for (int i = 0; i < MAX_BEE; i++) {
@@ -71,6 +80,17 @@ GameScreenView::GameScreenView() {
 		add (eDieImages[i]);
 		eDieCounter[i] = -1;
 	}
+
+	for (int i = 0; i < MAX_SCORE_LEN - 1; i++) {
+		scoreImages[i].setBitmap(touchgfx::Bitmap(BITMAP_N0_ID));
+		scoreImages[i].setXY(8 * i, 8);
+		scoreImages[i].setVisible(false);
+		add (scoreImages[i]);
+	}
+	scoreImages[5].setBitmap(touchgfx::Bitmap(BITMAP_N0_ID));
+	scoreImages[5].setXY(40, 8);
+	add (scoreImages[5]);
+	oldScore = 0;
 }
 
 void GameScreenView::setupScreen() {
@@ -139,19 +159,23 @@ void GameScreenView::handleTickEvent() {
 
 	//ship
 	uint8_t res;
+
 	if (osMessageQueueGetCount(Queue1Handle) > 0) {
 		osMessageQueueGet(Queue1Handle, &res, NULL, osWaitForever);
 		if (res == 'R') {
-			game.ship.moveR();
+			if (game.ship.status == ALIVE)
+				game.ship.moveR();
 		}
 	}
 	if (osMessageQueueGetCount(Queue2Handle) > 0) {
 		osMessageQueueGet(Queue2Handle, &res, NULL, osWaitForever);
 		if (res == 'L') {
-			game.ship.moveL();
+			if (game.ship.status == ALIVE)
+				game.ship.moveL();
 		}
 
 	}
+
 	if (osMessageQueueGetCount(Queue3Handle) > 0) {
 		osMessageQueueGet(Queue3Handle, &res, NULL, osWaitForever);
 		if (res == 'F') {
@@ -180,23 +204,44 @@ void GameScreenView::handleTickEvent() {
 		}
 	}
 	galagaImage.moveTo(game.ship.x, game.ship.y);
-	if (game.ship.live != oldLive) {
-		oldLive = game.ship.live;
-		for (int i = 0; i < game.ship.live; i++) {
-			liveImages[i].setVisible(true);
+//	if (game.ship.live != oldLive) {
+//		oldLive = game.ship.live;
+//		for (int i = 0; i < game.ship.live; i++) {
+//			liveImages[i].setVisible(true);
+//		}
+//		for (int i = game.ship.live; i < MAX_LIVE; i++) {
+//			liveImages[i].setVisible(false);
+//		}
+//	}
+	if (game.ship.status == DIE) {
+		galagaImage.setVisible(false);
+		if (mDieCounter == 0) {
+			mDieImage.setVisible(true);
+			mDieImage.moveTo(game.ship.x - 8, game.ship.y - 8);
 		}
-		for (int i = game.ship.live; i < MAX_LIVE; i++) {
-			liveImages[i].setVisible(false);
+		mDieCounter++;
+		if (mDieCounter % 10 == 0) {
+			mDieImage.setBitmap(MDIE_BITMAPS[mDieCounter / 10]);
+			if (mDieCounter >= 40) {
+				galagaImage.setVisible(true);
+				mDieCounter = 0;
+				mDieImage.setBitmap(EDIE_BITMAPS[0]);
+				mDieImage.setVisible(false);
+				if (game.ship.live > 1)
+					game.ship.live--;
+				liveImages[game.ship.live].setVisible(false);
+				game.ship.status = ALIVE;
+			}
 		}
 	}
 
 	//enemy
 	for (int i = 0; i < MAX_ENEMY; i++) {
-		switch (game.enemies[i].status) {
+		switch (game.bosses[i].status) {
 		case ALIVE:
-			enemy1Images[i].moveTo(game.enemies[i].x, game.enemies[i].y);
-			enemy0Images[i].moveTo(game.enemies[i].x, game.enemies[i].y);
-			if (game.enemies[i].sprite) {
+			enemy1Images[i].moveTo(game.bosses[i].x, game.bosses[i].y);
+			enemy0Images[i].moveTo(game.bosses[i].x, game.bosses[i].y);
+			if (game.bosses[i].sprite) {
 				enemy1Images[i].setVisible(true);
 				enemy0Images[i].setVisible(false);
 			} else {
@@ -210,10 +255,10 @@ void GameScreenView::handleTickEvent() {
 			for (int j = 0; j < 5; j++) {
 				if (eDieCounter[j] == -1) {
 					eDieCounter[j] = 0;
-					eDieImages[j].moveTo(game.enemies[i].x - 8,
-							game.enemies[i].y - 8);
+					eDieImages[j].moveTo(game.bosses[i].x - 8,
+							game.bosses[i].y - 8);
 					eDieImages[j].setVisible(true);
-					game.enemies[i].status = DEAD;
+					game.bosses[i].status = DEAD;
 					break;
 				}
 			}
@@ -317,6 +362,36 @@ void GameScreenView::handleTickEvent() {
 					eDieImages[i].setVisible(false);
 				}
 			}
+		}
+	}
+	for (int i = 0; i < MAX_EBULLET; i++) {
+		switch (game.eBullets[i].status) {
+		case SPAWN:
+			eBulletImages[i].moveTo(game.eBullets[i].x, game.eBullets[i].y);
+			eBulletImages[i].setVisible(true);
+			game.eBullets[i].updateStatus(ACTIVE);
+			break;
+		case ACTIVE:
+			eBulletImages[i].moveTo(game.eBullets[i].x, game.eBullets[i].y);
+			break;
+		case INACTIVE:
+			eBulletImages[i].setVisible(false);
+			break;
+		default:
+			break;
+		}
+	}
+
+	//score
+	if (game.score != oldScore) {
+		oldScore = game.score;
+		uint32_t score = game.score;
+		for (int i = MAX_SCORE_LEN - 1; i >= 0; i--) {
+			uint8_t digit = score % 10;
+			score /= 10;
+			scoreImages[i].setBitmap(touchgfx::Bitmap(DIGIT_BITMAPS[digit]));
+			scoreImages[i].setVisible(true);
+			if(score==0) break;
 		}
 	}
 	invalidate();

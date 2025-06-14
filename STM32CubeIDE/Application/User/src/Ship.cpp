@@ -5,7 +5,8 @@ Ship::Ship() {
 	this->y = 280;
 	this->w = 16;
 	this->h = 16;
-	this->live = 1;
+	this->live = 10;
+	this-> status= ALIVE;
 }
 Ship::~Ship() {
 

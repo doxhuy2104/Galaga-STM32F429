@@ -14,7 +14,7 @@ const uint8_t MAX_EBULLET = 20;
 const uint8_t MAX_ENEMY = 10;
 const uint8_t MAX_CHANGE_DIR_TIME = 80;
 const uint8_t MAX_CHANGE_SPR_TIME = 30;
-
+//const uint8_t FIRE_PROBABILITY = 100;
 
 class Enemy:public Entity{
 public:
@@ -31,8 +31,8 @@ public:
 	uint8_t changeDirTime;
 	uint8_t changeSprTime;
 	uint8_t sprite;
-
-	Bullet bullets[MAX_BULLET];
+	uint8_t count;
 	int bulletCount;
+	uint16_t score;
 };
 #endif

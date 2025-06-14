@@ -1,2 +1,2 @@
-D:/Galaga/Galaga/TouchGFX/generated/images/src/BitmapDatabase.cpp:85:37:const touchgfx::Bitmap::BitmapData* BitmapDatabase::getInstance()	0	static
-D:/Galaga/Galaga/TouchGFX/generated/images/src/BitmapDatabase.cpp:90:10:uint16_t BitmapDatabase::getInstanceSize()	0	static
+D:/Galaga/Galaga/TouchGFX/generated/images/src/BitmapDatabase.cpp:87:37:const touchgfx::Bitmap::BitmapData* BitmapDatabase::getInstance()	0	static
+D:/Galaga/Galaga/TouchGFX/generated/images/src/BitmapDatabase.cpp:92:10:uint16_t BitmapDatabase::getInstanceSize()	0	static

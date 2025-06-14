@@ -7,6 +7,11 @@
 #include <vector>
 
 #define MAX_LIVE 10
+#define SPAWN 1
+#define ALIVE 2
+#define DIE 3
+#define DEAD 4
+
 
 class Ship:public Entity{
 public:

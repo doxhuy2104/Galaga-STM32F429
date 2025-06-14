@@ -30,6 +30,10 @@ GameScreenViewBase::GameScreenViewBase()
     highScore.setXY(81, 0);
     highScore.setBitmap(touchgfx::Bitmap(BITMAP_HIGHSCORETEXT_ID));
     add(highScore);
+
+    s1upImage.setXY(18, 0);
+    s1upImage.setBitmap(touchgfx::Bitmap(BITMAP_S1UP_ID));
+    add(s1upImage);
 }
 
 GameScreenViewBase::~GameScreenViewBase()

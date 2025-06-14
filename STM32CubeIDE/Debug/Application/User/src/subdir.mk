@@ -6,6 +6,7 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../Application/User/src/Bee.cpp \
+../Application/User/src/Boss.cpp \
 ../Application/User/src/Bullet.cpp \
 ../Application/User/src/Butterfly.cpp \
 ../Application/User/src/Enemy.cpp \
@@ -15,6 +16,7 @@ CPP_SRCS += \
 
 OBJS += \
 ./Application/User/src/Bee.o \
+./Application/User/src/Boss.o \
 ./Application/User/src/Bullet.o \
 ./Application/User/src/Butterfly.o \
 ./Application/User/src/Enemy.o \
@@ -24,6 +26,7 @@ OBJS += \
 
 CPP_DEPS += \
 ./Application/User/src/Bee.d \
+./Application/User/src/Boss.d \
 ./Application/User/src/Bullet.d \
 ./Application/User/src/Butterfly.d \
 ./Application/User/src/Enemy.d \
@@ -39,7 +42,7 @@ Application/User/src/%.o Application/User/src/%.su Application/User/src/%.cyclo:
 clean: clean-Application-2f-User-2f-src
 
 clean-Application-2f-User-2f-src:
-	-$(RM) ./Application/User/src/Bee.cyclo ./Application/User/src/Bee.d ./Application/User/src/Bee.o ./Application/User/src/Bee.su ./Application/User/src/Bullet.cyclo ./Application/User/src/Bullet.d ./Application/User/src/Bullet.o ./Application/User/src/Bullet.su ./Application/User/src/Butterfly.cyclo ./Application/User/src/Butterfly.d ./Application/User/src/Butterfly.o ./Application/User/src/Butterfly.su ./Application/User/src/Enemy.cyclo ./Application/User/src/Enemy.d ./Application/User/src/Enemy.o ./Application/User/src/Enemy.su ./Application/User/src/Entity.cyclo ./Application/User/src/Entity.d ./Application/User/src/Entity.o ./Application/User/src/Entity.su ./Application/User/src/Game.cyclo ./Application/User/src/Game.d ./Application/User/src/Game.o ./Application/User/src/Game.su ./Application/User/src/Ship.cyclo ./Application/User/src/Ship.d ./Application/User/src/Ship.o ./Application/User/src/Ship.su
+	-$(RM) ./Application/User/src/Bee.cyclo ./Application/User/src/Bee.d ./Application/User/src/Bee.o ./Application/User/src/Bee.su ./Application/User/src/Boss.cyclo ./Application/User/src/Boss.d ./Application/User/src/Boss.o ./Application/User/src/Boss.su ./Application/User/src/Bullet.cyclo ./Application/User/src/Bullet.d ./Application/User/src/Bullet.o ./Application/User/src/Bullet.su ./Application/User/src/Butterfly.cyclo ./Application/User/src/Butterfly.d ./Application/User/src/Butterfly.o ./Application/User/src/Butterfly.su ./Application/User/src/Enemy.cyclo ./Application/User/src/Enemy.d ./Application/User/src/Enemy.o ./Application/User/src/Enemy.su ./Application/User/src/Entity.cyclo ./Application/User/src/Entity.d ./Application/User/src/Entity.o ./Application/User/src/Entity.su ./Application/User/src/Game.cyclo ./Application/User/src/Game.d ./Application/User/src/Game.o ./Application/User/src/Game.su ./Application/User/src/Ship.cyclo ./Application/User/src/Ship.d ./Application/User/src/Ship.o ./Application/User/src/Ship.su
 
 .PHONY: clean-Application-2f-User-2f-src
 

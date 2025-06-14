@@ -6,6 +6,9 @@
 #include <images/BitmapDatabase.hpp>
 #include <Game.hpp>
 #include <vector>
+
+#define MAX_SCORE_LEN 6
+
 class GameScreenView: public GameScreenViewBase {
 public:
 	GameScreenView();
@@ -34,7 +37,10 @@ private:
 	touchgfx::Image butterfly1Images[MAX_BEE];
 	touchgfx::Image eDieImages[5];
 	int8_t eDieCounter[5];
-	uint8_t oldLive;
+	touchgfx::Image mDieImage;
+	int8_t mDieCounter;
+	touchgfx::Image scoreImages[MAX_SCORE_LEN];
+	uint32_t oldScore;
 };
 
 #endif // GAMESCREENVIEW_HPP

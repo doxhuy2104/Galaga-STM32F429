@@ -3,7 +3,7 @@
 #include "Entity.hpp"
 
 const uint8_t MAX_BULLET = 20;
-const uint8_t MAX_ACTIVETIME=60;
+const uint8_t MAX_ACTIVETIME=80;
 class Bullet: public Entity {
 public:
 	Bullet();
