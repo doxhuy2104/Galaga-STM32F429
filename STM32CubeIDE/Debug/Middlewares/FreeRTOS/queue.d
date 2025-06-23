@@ -1,5 +1,5 @@
 Middlewares/FreeRTOS/queue.o: \
- D:/Galaga/Galaga/Middlewares/Third_Party/FreeRTOS/Source/queue.c \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/Middlewares/Third_Party/FreeRTOS/Source/queue.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \

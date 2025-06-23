@@ -8,6 +8,16 @@
 #include <vector>
 
 #define MAX_SCORE_LEN 6
+#define MAX_STAGE_LEN 2
+
+struct SoundPlayer {
+    const uint32_t* tones;
+    const uint16_t* durations;
+    uint8_t count;
+    uint8_t index;
+    uint16_t tickCounter;
+    bool isPlaying;
+};
 
 class GameScreenView: public GameScreenViewBase {
 public:
@@ -17,6 +27,14 @@ public:
 	virtual void setupScreen();
 	virtual void tearDownScreen();
 	virtual void handleTickEvent();
+    void playToneSequence(const uint32_t* tones, const uint16_t* durations, uint8_t count);
+    void playFireSound();
+    void playEnemyDieSound();
+    void playShipDieSound();
+    void playEnemyFireSound();
+    void playStageUpSound();
+    void startTone(uint32_t freq);
+    void stopTone();
 protected:
 	uint32_t tickCount;
 	int16_t bg0Y;
@@ -41,6 +59,11 @@ private:
 	int8_t mDieCounter;
 	touchgfx::Image scoreImages[MAX_SCORE_LEN];
 	uint32_t oldScore;
+	touchgfx::Image highScoreImages[MAX_SCORE_LEN];
+	uint32_t highestScore;
+	touchgfx::Image stageImages[MAX_STAGE_LEN];
+	uint32_t oldStage;
+	SoundPlayer soundPlayer;
 };
 
 #endif // GAMESCREENVIEW_HPP

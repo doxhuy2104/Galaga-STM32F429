@@ -1,5 +1,5 @@
 Application/User/generated/TypedTextDatabase.o: \
- D:/Galaga/Galaga/TouchGFX/generated/texts/src/TypedTextDatabase.cpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/TouchGFX/generated/texts/src/TypedTextDatabase.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \

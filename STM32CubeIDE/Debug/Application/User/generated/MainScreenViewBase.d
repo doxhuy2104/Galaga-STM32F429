@@ -1,5 +1,5 @@
 Application/User/generated/MainScreenViewBase.o: \
- D:/Galaga/Galaga/TouchGFX/generated/gui_generated/src/mainscreen_screen/MainScreenViewBase.cpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/TouchGFX/generated/gui_generated/src/mainscreen_screen/MainScreenViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/mainscreen_screen/MainScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

@@ -1,5 +1,5 @@
 Application/User/generated/Table_verdana_10_4bpp.o: \
- D:/Galaga/Galaga/TouchGFX/generated/fonts/src/Table_verdana_10_4bpp.cpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/TouchGFX/generated/fonts/src/Table_verdana_10_4bpp.cpp \
  ../../TouchGFX/generated/fonts/include/fonts/GeneratedFont.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/ConstFont.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \

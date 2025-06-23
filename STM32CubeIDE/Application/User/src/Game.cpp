@@ -20,6 +20,9 @@ Game::Game() {
 		butterflys[i].status = ALIVE;
 	}
 	score=0;
+
+	spawnQueueSize = 0;
+	spawnDelayCounter = 0;
 }
 Game::~Game() {
 
@@ -105,7 +108,97 @@ void Game::update() {
 			ship.status = DIE;
 		}
 	}
+	handleSpawnQueue();
 }
+
+void Game::queueSpawn(SpawnRequest::Type type, int x, int y) {
+	if (spawnQueueSize < MAX_SPAWN_QUEUE) {
+		spawnQueue[spawnQueueSize++] = {type, x, y};
+	}
+}
+
+void Game::handleSpawnQueue() {
+	if (spawnQueueSize == 0)
+		return;
+
+	if (spawnDelayCounter > 0) {
+		spawnDelayCounter--;
+		return;
+	}
+
+	SpawnRequest req = spawnQueue[0];
+
+	// Dịch hàng đợi lên sau khi xử lý
+	for (int i = 1; i < spawnQueueSize; i++) {
+		spawnQueue[i - 1] = spawnQueue[i];
+	}
+	spawnQueueSize--;
+
+	// Gọi spawn dựa vào loại
+	if (req.type == SpawnRequest::BOSS) {
+		for (int i = 0; i < MAX_BOSS; i++) {
+			if (bosses[i].status == DEAD) {
+				bosses[i].spawn(req.x, req.y);
+				break;
+			}
+		}
+	} else if (req.type == SpawnRequest::BEE) {
+		for (int i = 0; i < MAX_BEE; i++) {
+			if (bees[i].status == DEAD) {
+				bees[i].spawn(req.x, req.y);
+				break;
+			}
+		}
+	} else if (req.type == SpawnRequest::BUTTERFLY) {
+		for (int i = 0; i < MAX_BUTTERFLY; i++) {
+			if (butterflys[i].status == DEAD) {
+				butterflys[i].spawn(req.x, req.y);
+				break;
+			}
+		}
+	}
+
+	spawnDelayCounter = 12;
+}
+
+int getXPosition(int index, int totalEnemies) {
+    // Tính tổng chiều rộng tất cả quái (bao gồm khoảng cách)
+    int maxSpacing = (SCREEN_WIDTH - ENEMY_WIDTH) / (totalEnemies > 1 ? totalEnemies - 1 : 1);
+
+    // Đảm bảo spacing không quá nhỏ (tối thiểu 4px)
+    int spacing = maxSpacing > ENEMY_WIDTH ? maxSpacing : ENEMY_WIDTH + 4;
+
+    int totalWidth = (totalEnemies - 1) * spacing + ENEMY_WIDTH;
+    int startX = (SCREEN_WIDTH - totalWidth) / 2;
+
+    return startX + index * spacing;
+}
+
+void spawnStage(int stage) {
+    int bossCount = stage;
+    int beeCount = stage * 2;
+    int butterflyCount = stage * 3;
+
+    if (bossCount > MAX_BOSS) bossCount = MAX_BOSS;
+    if (beeCount > MAX_BEE) beeCount = MAX_BEE;
+    if (butterflyCount > MAX_BUTTERFLY) butterflyCount = MAX_BUTTERFLY;
+
+    for (int i = 0; i < bossCount; i++) {
+        int x = getXPosition(i, bossCount);
+        game.bosses[i].spawn(x, 20);
+    }
+
+    for (int i = 0; i < beeCount; i++) {
+        int x = getXPosition(i, beeCount);
+        game.bees[i].spawn(x, 60);
+    }
+
+    for (int i = 0; i < butterflyCount; i++) {
+        int x = getXPosition(i, butterflyCount);
+        game.butterflys[i].spawn(x, 100);
+    }
+}
+
 
 void GameThread(void *argument) {
 	while (1) {
