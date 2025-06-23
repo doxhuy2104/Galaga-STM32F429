@@ -1,5 +1,5 @@
 Application/User/gui/GameScreenView.o: \
- D:/Galaga/Galaga/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp \
  ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
@@ -49,13 +49,13 @@ Application/User/gui/GameScreenView.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Game.hpp \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Enemy.hpp \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bullet.hpp \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Entity.hpp \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bee.hpp \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Butterfly.hpp \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Boss.hpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Game.hpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Enemy.hpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Bullet.hpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Entity.hpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Bee.hpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Butterfly.hpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Boss.hpp \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
@@ -67,7 +67,50 @@ Application/User/gui/GameScreenView.o: \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Ship.hpp
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Ship.hpp \
+ ../../Core/Inc/flash_score.h ../../Core/Inc/main.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
+ ../../Core/Inc/stm32f4xx_hal_conf.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h \
+ ../../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
+ ../../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f429xx.h \
+ ../../Drivers/CMSIS/Include/core_cm4.h \
+ ../../Drivers/CMSIS/Include/cmsis_version.h \
+ ../../Drivers/CMSIS/Include/cmsis_compiler.h \
+ ../../Drivers/CMSIS/Include/cmsis_gcc.h \
+ ../../Drivers/CMSIS/Include/mpu_armv7.h \
+ ../../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma2d.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sdram.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fmc.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
+ ../../Core/Inc/firesound.h
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -117,13 +160,13 @@ Application/User/gui/GameScreenView.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Game.hpp:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Enemy.hpp:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bullet.hpp:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Entity.hpp:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bee.hpp:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Butterfly.hpp:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Boss.hpp:
+D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Game.hpp:
+D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Enemy.hpp:
+D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Bullet.hpp:
+D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Entity.hpp:
+D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Bee.hpp:
+D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Butterfly.hpp:
+D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Boss.hpp:
 ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../../Core/Inc/FreeRTOSConfig.h:
@@ -135,4 +178,48 @@ D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Boss.hpp:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Ship.hpp:
+D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Ship.hpp:
+../../Core/Inc/flash_score.h:
+../../Core/Inc/main.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
+../../Core/Inc/stm32f4xx_hal_conf.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:
+../../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:
+../../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f429xx.h:
+../../Drivers/CMSIS/Include/core_cm4.h:
+../../Drivers/CMSIS/Include/cmsis_version.h:
+../../Drivers/CMSIS/Include/cmsis_compiler.h:
+../../Drivers/CMSIS/Include/cmsis_gcc.h:
+../../Drivers/CMSIS/Include/mpu_armv7.h:
+../../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma2d.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sdram.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fmc.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
+../../Core/Inc/firesound.h:

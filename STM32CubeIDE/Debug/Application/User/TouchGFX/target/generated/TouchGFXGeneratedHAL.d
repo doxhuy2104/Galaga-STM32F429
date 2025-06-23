@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
- D:/Galaga/Galaga/TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp \
  ../../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp \
@@ -80,13 +80,13 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenPresenter.hpp \
  ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Game.hpp \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Enemy.hpp \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bullet.hpp \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Entity.hpp \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bee.hpp \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Butterfly.hpp \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Boss.hpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Game.hpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Enemy.hpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Bullet.hpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Entity.hpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Bee.hpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Butterfly.hpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Boss.hpp \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
@@ -98,7 +98,7 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Ship.hpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Ship.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
@@ -245,13 +245,13 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp:
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenPresenter.hpp:
 ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Game.hpp:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Enemy.hpp:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bullet.hpp:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Entity.hpp:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bee.hpp:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Butterfly.hpp:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Boss.hpp:
+D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Game.hpp:
+D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Enemy.hpp:
+D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Bullet.hpp:
+D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Entity.hpp:
+D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Bee.hpp:
+D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Butterfly.hpp:
+D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Boss.hpp:
 ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../../Core/Inc/FreeRTOSConfig.h:
@@ -263,7 +263,7 @@ D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Boss.hpp:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Ship.hpp:
+D:/Downloads/Galaga-STM32F429-dev-anhdt/STM32CubeIDE/Application/User/src/Ship.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:

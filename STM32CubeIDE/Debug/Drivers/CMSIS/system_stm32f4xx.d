@@ -1,5 +1,5 @@
 Drivers/CMSIS/system_stm32f4xx.o: \
- D:/Galaga/Galaga/Core/Src/system_stm32f4xx.c \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/Core/Src/system_stm32f4xx.c \
  ../../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
  ../../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f429xx.h \
  ../../Drivers/CMSIS/Include/core_cm4.h \

@@ -1,5 +1,5 @@
 Application/User/generated/CompressedFontCache.o: \
- D:/Galaga/Galaga/TouchGFX/generated/fonts/src/CompressedFontCache.cpp \
+ D:/Downloads/Galaga-STM32F429-dev-anhdt/TouchGFX/generated/fonts/src/CompressedFontCache.cpp \
  ../../TouchGFX/generated/fonts/include/fonts/CompressedFontCache.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp \

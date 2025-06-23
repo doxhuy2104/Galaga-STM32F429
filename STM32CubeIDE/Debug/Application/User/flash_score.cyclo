@@ -1,0 +1,3 @@
+../Application/User/flash_score.c:15:6:Flash_SaveHighScore	2
+../Application/User/flash_score.c:39:6:Flash_ResetHighScore	1
+../Application/User/flash_score.c:44:10:Flash_LoadHighScore	2

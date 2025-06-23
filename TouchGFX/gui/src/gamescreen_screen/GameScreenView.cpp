@@ -1,9 +1,16 @@
 #include <gui/gamescreen_screen/GameScreenView.hpp>
 #include <cmsis_os.h>
 #include <Game.hpp>
+#include <flash_score.h>
+#include <main.h>
+#include <stdint.h>
+#include <firesound.h>
 extern osMessageQueueId_t Queue1Handle;
 extern osMessageQueueId_t Queue2Handle;
 extern osMessageQueueId_t Queue3Handle;
+
+
+SoundPlayer soundPlayer = {nullptr, nullptr, 0, 0, 0, false};
 
 osThreadId_t gameTaskHandle;
 const uint16_t EDIE_BITMAPS[] = { BITMAP_EDIE0_ID, BITMAP_EDIE1_ID,
@@ -13,6 +20,11 @@ const uint16_t MDIE_BITMAPS[] = { BITMAP_MDIE0_ID, BITMAP_MDIE1_ID,
 const uint16_t DIGIT_BITMAPS[] = { BITMAP_N0_ID, BITMAP_N1_ID, BITMAP_N2_ID,
 		BITMAP_N3_ID, BITMAP_N4_ID, BITMAP_N5_ID, BITMAP_N6_ID, BITMAP_N7_ID,
 		BITMAP_N8_ID, BITMAP_N9_ID };
+
+extern TIM_HandleTypeDef htim3;
+extern TIM_HandleTypeDef htim2;
+
+
 GameScreenView::GameScreenView() {
 	bg0Y = -320;
 	bg1Y = 0;
@@ -91,7 +103,36 @@ GameScreenView::GameScreenView() {
 	scoreImages[5].setXY(40, 8);
 	add (scoreImages[5]);
 	oldScore = 0;
+
+	for (int i = 0; i < MAX_SCORE_LEN; i++) {
+		highScoreImages[i].setBitmap(touchgfx::Bitmap(BITMAP_N0_ID));
+		highScoreImages[i].setXY(100 + 8 * i, 8);
+		highScoreImages[i].setVisible(false);
+		add(highScoreImages[i]);
+	}
+//	Flash_ResetHighScore();
+	highestScore = Flash_LoadHighScore();
+	if (true) {
+		uint32_t hScore = highestScore;
+		for (int i = MAX_SCORE_LEN - 1; i >= 0; i--) {
+			uint8_t digit = hScore % 10;
+			hScore /= 10;
+			highScoreImages[i].setBitmap(touchgfx::Bitmap(DIGIT_BITMAPS[digit]));
+			highScoreImages[i].setVisible(true);
+			if(hScore==0) break;
+		}
+	}
+
+	for (int i = 0; i < MAX_STAGE_LEN; i++) {
+		stageImages[i].setBitmap(touchgfx::Bitmap(BITMAP_N0_ID));
+		stageImages[i].setXY(210 + 8 * i, 8);
+		stageImages[i].setVisible(false);
+		add(stageImages[i]);
+	}
+	oldStage = 0;
+	game.stage = 1;
 }
+
 
 void GameScreenView::setupScreen() {
 	GameScreenViewBase::setupScreen();
@@ -191,6 +232,7 @@ void GameScreenView::handleTickEvent() {
 					game.ship.bullets[i].y);
 			bulletImages[i].setVisible(true);
 			game.ship.bullets[i].updateStatus(ACTIVE);
+			playFireSound();
 			break;
 		case ACTIVE:
 			bulletImages[i].moveTo(game.ship.bullets[i].x,
@@ -218,6 +260,7 @@ void GameScreenView::handleTickEvent() {
 		if (mDieCounter == 0) {
 			mDieImage.setVisible(true);
 			mDieImage.moveTo(game.ship.x - 8, game.ship.y - 8);
+			playShipDieSound();
 		}
 		mDieCounter++;
 		if (mDieCounter % 10 == 0) {
@@ -254,6 +297,7 @@ void GameScreenView::handleTickEvent() {
 			enemy0Images[i].setVisible(false);
 			for (int j = 0; j < 5; j++) {
 				if (eDieCounter[j] == -1) {
+					playEnemyDieSound();
 					eDieCounter[j] = 0;
 					eDieImages[j].moveTo(game.bosses[i].x - 8,
 							game.bosses[i].y - 8);
@@ -394,5 +438,104 @@ void GameScreenView::handleTickEvent() {
 			if(score==0) break;
 		}
 	}
+
+	//highest score
+	if (game.score > highestScore) {
+		highestScore = game.score;
+//		Flash_SaveHighScore(highestScore); // chỉ lưu khi game over để không bị giật
+		uint32_t hScore = game.score;
+		for (int i = MAX_SCORE_LEN - 1; i >= 0; i--) {
+			uint8_t digit = hScore % 10;
+			hScore /= 10;
+			highScoreImages[i].setBitmap(touchgfx::Bitmap(DIGIT_BITMAPS[digit]));
+			highScoreImages[i].setVisible(true);
+			if(hScore==0) break;
+		}
+	}
+
+	//stage
+	if (game.stage != oldStage) {
+		oldStage = game.stage;
+		uint32_t stage = game.stage;
+		for (int i = MAX_STAGE_LEN - 1; i >= 0; i--) {
+			uint8_t digit = stage % 10;
+			stage /= 10;
+			stageImages[i].setBitmap(touchgfx::Bitmap(DIGIT_BITMAPS[digit]));
+			stageImages[i].setVisible(true);
+			if(stage==0) break;
+		}
+	}
+
+	bool allDead = true;
+	for (int i = 0; i < MAX_ENEMY; i++)
+		if (game.bosses[i].status == ALIVE) allDead = false;
+	for (int i = 0; i < MAX_BEE; i++)
+		if (game.bees[i].status == ALIVE) allDead = false;
+	for (int i = 0; i < MAX_BUTTERFLY; i++)
+		if (game.butterflys[i].status == ALIVE) allDead = false;
+
+	if (allDead) {
+		game.stage++;
+		spawnStage(game.stage);
+	}
+	if (soundPlayer.isPlaying) {
+	    soundPlayer.tickCounter++;
+	    if (soundPlayer.tickCounter >= soundPlayer.durations[soundPlayer.index]) {
+	        soundPlayer.index++;
+	        soundPlayer.tickCounter = 0;
+	        if (soundPlayer.index < soundPlayer.count) {
+	            startTone(soundPlayer.tones[soundPlayer.index]);
+	        } else {
+	            stopTone();
+	            soundPlayer.isPlaying = false;
+	        }
+	    }
+	}
+
+
 	invalidate();
 }
+void GameScreenView::startTone(uint32_t freq) {
+    uint32_t period = 1000000 / freq; // Timer chạy 1MHz
+    __HAL_TIM_SET_AUTORELOAD(&htim3, period - 1);
+    __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, period / 2); // 50% duty
+    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+}
+
+void GameScreenView::stopTone() {
+    HAL_TIM_PWM_Stop(&htim3, TIM_CHANNEL_2);
+}
+
+void GameScreenView::playToneSequence(const uint32_t* tones, const uint16_t* durations, uint8_t count) {
+    soundPlayer.tones = tones;
+    soundPlayer.durations = durations;
+    soundPlayer.count = count;
+    soundPlayer.index = 0;
+    soundPlayer.tickCounter = 0;
+    soundPlayer.isPlaying = true;
+    startTone(tones[0]);
+}
+void GameScreenView::playFireSound() {
+    static const uint32_t tones[] = {1000};
+    static const uint16_t durations[] = {2}; // 2 tick = ~40ms
+    playToneSequence(tones, durations, 1);
+}
+void GameScreenView::playEnemyDieSound() {
+    static const uint32_t tones[] = {880, 660, 440};
+    static const uint16_t durations[] = {3, 3, 3};
+    playToneSequence(tones, durations, 3);
+}
+void GameScreenView::playShipDieSound() {
+    static const uint32_t tones[] = {400, 300, 200, 150};
+    static const uint16_t durations[] = {3, 3, 3, 3};
+    playToneSequence(tones, durations, 4);
+}
+void GameScreenView::playEnemyFireSound() {
+    static const uint32_t tones[] = {700};
+    static const uint16_t durations[] = {2};
+    playToneSequence(tones, durations, 1);
+}
+
+
+
+

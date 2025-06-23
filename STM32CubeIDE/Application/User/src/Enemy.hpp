@@ -21,7 +21,8 @@ public:
 	Enemy();
 	~Enemy();
 	void update();
-	void spawn();
+//	void spawn();
+	virtual void spawn(int x, int y);
 	void checkCollision();
 	void moveL();
 	void moveR();
