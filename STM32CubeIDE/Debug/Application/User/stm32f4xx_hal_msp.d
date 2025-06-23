@@ -1,5 +1,6 @@
 Application/User/stm32f4xx_hal_msp.o: \
- D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c ../../Core/Inc/main.h \
+ C:/Project\ nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c \
+ ../../Core/Inc/main.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../../Core/Inc/stm32f4xx_hal_conf.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \

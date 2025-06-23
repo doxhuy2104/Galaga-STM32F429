@@ -8,6 +8,7 @@
 #include <vector>
 
 #define MAX_SCORE_LEN 6
+#define MAX_STAGE_LEN 2
 
 class GameScreenView: public GameScreenViewBase {
 public:
@@ -41,6 +42,10 @@ private:
 	int8_t mDieCounter;
 	touchgfx::Image scoreImages[MAX_SCORE_LEN];
 	uint32_t oldScore;
+	touchgfx::Image highScoreImages[MAX_SCORE_LEN];
+	uint32_t highestScore;
+	touchgfx::Image stageImages[MAX_STAGE_LEN];
+	uint32_t oldStage;
 };
 
 #endif // GAMESCREENVIEW_HPP

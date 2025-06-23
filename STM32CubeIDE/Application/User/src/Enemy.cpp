@@ -41,6 +41,12 @@ void Enemy::update() {
 
 }
 
+void Enemy::spawn(int x, int y) {
+    this->x = x;
+    this->y = y;
+    this->status = ALIVE;
+}
+
 void Enemy::fire() {
 
 }

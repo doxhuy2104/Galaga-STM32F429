@@ -1,5 +1,5 @@
 Application/User/generated/Kerning_verdana_10_4bpp.o: \
- D:/Galaga/Galaga/TouchGFX/generated/fonts/src/Kerning_verdana_10_4bpp.cpp \
+ C:/Project\ nhúng/Galaga-STM32F429/TouchGFX/generated/fonts/src/Kerning_verdana_10_4bpp.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \

@@ -1,5 +1,5 @@
 Application/User/generated/FontCache.o: \
- D:/Galaga/Galaga/TouchGFX/generated/fonts/src/FontCache.cpp \
+ C:/Project\ nhúng/Galaga-STM32F429/TouchGFX/generated/fonts/src/FontCache.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \

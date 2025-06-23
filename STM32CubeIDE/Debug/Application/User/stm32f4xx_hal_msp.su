@@ -1,19 +1,19 @@
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:64:6:HAL_MspInit	8	static
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:89:6:HAL_ADC_MspInit	40	static
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:126:6:HAL_ADC_MspDeInit	8	static
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:156:6:HAL_CRC_MspInit	8	static
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:179:6:HAL_CRC_MspDeInit	0	static
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:201:6:HAL_DMA2D_MspInit	16	static
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:227:6:HAL_DMA2D_MspDeInit	0	static
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:252:6:HAL_I2C_MspInit	64	static
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:301:6:HAL_I2C_MspDeInit	8	static
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:332:6:HAL_LTDC_MspInit	120	static
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:458:6:HAL_LTDC_MspDeInit	8	static
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:520:6:HAL_RNG_MspInit	8	static
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:543:6:HAL_RNG_MspDeInit	0	static
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:565:6:HAL_SPI_MspInit	40	static
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:603:6:HAL_SPI_MspDeInit	0	static
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:633:6:HAL_UART_MspInit	40	static
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:670:6:HAL_UART_MspDeInit	0	static
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:801:6:HAL_SDRAM_MspInit	48	static
-D:/Galaga/Galaga/Core/Src/stm32f4xx_hal_msp.c:887:6:HAL_SDRAM_MspDeInit	8	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:64:6:HAL_MspInit	8	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:89:6:HAL_ADC_MspInit	40	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:126:6:HAL_ADC_MspDeInit	8	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:156:6:HAL_CRC_MspInit	8	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:179:6:HAL_CRC_MspDeInit	0	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:201:6:HAL_DMA2D_MspInit	16	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:227:6:HAL_DMA2D_MspDeInit	0	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:252:6:HAL_I2C_MspInit	64	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:301:6:HAL_I2C_MspDeInit	8	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:332:6:HAL_LTDC_MspInit	120	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:458:6:HAL_LTDC_MspDeInit	8	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:520:6:HAL_RNG_MspInit	8	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:543:6:HAL_RNG_MspDeInit	0	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:565:6:HAL_SPI_MspInit	40	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:603:6:HAL_SPI_MspDeInit	0	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:633:6:HAL_UART_MspInit	40	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:670:6:HAL_UART_MspDeInit	0	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:801:6:HAL_SDRAM_MspInit	48	static
+C:/Project nhúng/Galaga-STM32F429/Core/Src/stm32f4xx_hal_msp.c:887:6:HAL_SDRAM_MspDeInit	8	static

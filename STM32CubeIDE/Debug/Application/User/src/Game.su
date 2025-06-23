@@ -1,6 +1,10 @@
-../Application/User/src/Game.cpp:5:1:Game::Game()	24	static
-../Application/User/src/Game.cpp:24:1:Game::~Game()	16	static
-../Application/User/src/Game.cpp:28:6:void Game::update()	64	static
-../Application/User/src/Game.cpp:110:6:void GameThread(void*)	56	static
-../Application/User/src/Game.cpp:167:1:cpp)	0	static
-../Application/User/src/Game.cpp:167:1:cpp)	0	static
+..\Application\User\src\Game.cpp:5:1:Game::Game()	24	static
+..\Application\User\src\Game.cpp:27:1:Game::~Game()	16	static
+..\Application\User\src\Game.cpp:114:6:void Game::queueSpawn(SpawnRequest::Type, int, int)	12	static
+..\Application\User\src\Game.cpp:120:6:void Game::handleSpawnQueue()	24	static
+..\Application\User\src\Game.cpp:31:6:void Game::update()	64	static
+..\Application\User\src\Game.cpp:164:5:int getXPosition(int, int)	0	static
+..\Application\User\src\Game.cpp:177:6:void spawnStage(int)	32	static
+..\Application\User\src\Game.cpp:203:6:void GameThread(void*)	56	static
+..\Application\User\src\Game.cpp:260:1:cpp)	0	static
+..\Application\User\src\Game.cpp:260:1:cpp)	0	static

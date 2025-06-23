@@ -14,9 +14,9 @@ Application/User/src/Game.o: ../Application/User/src/Game.cpp \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Ship.hpp \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bullet.hpp \
- D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Entity.hpp
+ C:/Project\ nhúng/Galaga-STM32F429/STM32CubeIDE/Application/User/src/Ship.hpp \
+ C:/Project\ nhúng/Galaga-STM32F429/STM32CubeIDE/Application/User/src/Bullet.hpp \
+ C:/Project\ nhúng/Galaga-STM32F429/STM32CubeIDE/Application/User/src/Entity.hpp
 ../Application/User/src/Game.hpp:
 ../Application/User/src/Enemy.hpp:
 ../Application/User/src/Bullet.hpp:
@@ -35,6 +35,6 @@ Application/User/src/Game.o: ../Application/User/src/Game.cpp \
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Ship.hpp:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Bullet.hpp:
-D:/Galaga/Galaga/STM32CubeIDE/Application/User/src/Entity.hpp:
+C:/Project\ nhúng/Galaga-STM32F429/STM32CubeIDE/Application/User/src/Ship.hpp:
+C:/Project\ nhúng/Galaga-STM32F429/STM32CubeIDE/Application/User/src/Bullet.hpp:
+C:/Project\ nhúng/Galaga-STM32F429/STM32CubeIDE/Application/User/src/Entity.hpp:

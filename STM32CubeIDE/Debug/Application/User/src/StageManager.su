@@ -1,0 +1,5 @@
+../Application/User/src/StageManager.cpp:12:14:const Stage& StageManager::getCurrentStage() const	0	static
+../Application/User/src/StageManager.cpp:16:9:uint8_t StageManager::getCurrentStageIndex() const	0	static
+../Application/User/src/StageManager.cpp:20:6:void StageManager::generateStage(uint8_t)	0	static
+../Application/User/src/StageManager.cpp:7:6:void StageManager::loadStage(uint8_t)	0	static
+../Application/User/src/StageManager.cpp:3:1:StageManager::StageManager()	8	static

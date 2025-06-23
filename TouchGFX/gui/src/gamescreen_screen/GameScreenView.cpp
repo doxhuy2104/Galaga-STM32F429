@@ -1,6 +1,8 @@
 #include <gui/gamescreen_screen/GameScreenView.hpp>
 #include <cmsis_os.h>
 #include <Game.hpp>
+#include <flash_score.h>
+#include <StageManager.hpp>
 extern osMessageQueueId_t Queue1Handle;
 extern osMessageQueueId_t Queue2Handle;
 extern osMessageQueueId_t Queue3Handle;
@@ -91,7 +93,37 @@ GameScreenView::GameScreenView() {
 	scoreImages[5].setXY(40, 8);
 	add (scoreImages[5]);
 	oldScore = 0;
+
+	for (int i = 0; i < MAX_SCORE_LEN; i++) {
+		highScoreImages[i].setBitmap(touchgfx::Bitmap(BITMAP_N0_ID));
+		highScoreImages[i].setXY(100 + 8 * i, 8);
+		highScoreImages[i].setVisible(false);
+		add(highScoreImages[i]);
+	}
+//	Flash_ResetHighScore();
+	highestScore = Flash_LoadHighScore();
+	if (true) {
+		uint32_t hScore = highestScore;
+		for (int i = MAX_SCORE_LEN - 1; i >= 0; i--) {
+			uint8_t digit = hScore % 10;
+			hScore /= 10;
+			highScoreImages[i].setBitmap(touchgfx::Bitmap(DIGIT_BITMAPS[digit]));
+			highScoreImages[i].setVisible(true);
+			if(hScore==0) break;
+		}
+	}
+
+	for (int i = 0; i < MAX_STAGE_LEN; i++) {
+		stageImages[i].setBitmap(touchgfx::Bitmap(BITMAP_N0_ID));
+		stageImages[i].setXY(210 + 8 * i, 8);
+		stageImages[i].setVisible(false);
+		add(stageImages[i]);
+	}
+	oldStage = 0;
+	game.stage = 1;
 }
+
+StageManager stageManager;
 
 void GameScreenView::setupScreen() {
 	GameScreenViewBase::setupScreen();
@@ -394,5 +426,46 @@ void GameScreenView::handleTickEvent() {
 			if(score==0) break;
 		}
 	}
+
+	//highest score
+	if (game.score > highestScore) {
+		highestScore = game.score;
+//		Flash_SaveHighScore(highestScore); // chỉ lưu khi game over để không bị giật
+		uint32_t hScore = game.score;
+		for (int i = MAX_SCORE_LEN - 1; i >= 0; i--) {
+			uint8_t digit = hScore % 10;
+			hScore /= 10;
+			highScoreImages[i].setBitmap(touchgfx::Bitmap(DIGIT_BITMAPS[digit]));
+			highScoreImages[i].setVisible(true);
+			if(hScore==0) break;
+		}
+	}
+
+	//stage
+	if (game.stage != oldStage) {
+		oldStage = game.stage;
+		uint32_t stage = game.stage;
+		for (int i = MAX_STAGE_LEN - 1; i >= 0; i--) {
+			uint8_t digit = stage % 10;
+			stage /= 10;
+			stageImages[i].setBitmap(touchgfx::Bitmap(DIGIT_BITMAPS[digit]));
+			stageImages[i].setVisible(true);
+			if(stage==0) break;
+		}
+	}
+
+	bool allDead = true;
+	for (int i = 0; i < MAX_ENEMY; i++)
+		if (game.bosses[i].status == ALIVE) allDead = false;
+	for (int i = 0; i < MAX_BEE; i++)
+		if (game.bees[i].status == ALIVE) allDead = false;
+	for (int i = 0; i < MAX_BUTTERFLY; i++)
+		if (game.butterflys[i].status == ALIVE) allDead = false;
+
+	if (allDead) {
+		game.stage++;
+		spawnStage(game.stage);
+	}
+
 	invalidate();
 }

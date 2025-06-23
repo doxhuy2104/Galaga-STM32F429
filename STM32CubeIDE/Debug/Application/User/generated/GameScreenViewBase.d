@@ -1,5 +1,5 @@
 Application/User/generated/GameScreenViewBase.o: \
- D:/Galaga/Galaga/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp \
+ C:/Project\ nhúng/Galaga-STM32F429/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
